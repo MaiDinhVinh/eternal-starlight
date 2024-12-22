@@ -59,6 +59,14 @@ public class ESEntities {
 					.updateInterval(1)
 					.build(entityKey("aethersent_meteor"))
 	);
+	public static final RegistryObject<EntityType<?>, EntityType<AetherstrikeRocketEntity>> AETHERSTRIKE_ROCKET = ENTITIES.register(
+		"aetherstrike_rocket",
+		() -> EntityType.Builder.<AetherstrikeRocketEntity>of(AetherstrikeRocketEntity::new, MobCategory.MISC)
+			.sized(0.25F, 0.25F)
+			.clientTrackingRange(4)
+			.updateInterval(10)
+			.build(EternalStarlight.id("aetherstrike_rocket").toString())
+	);
 	public static final RegistryObject<EntityType<?>, EntityType<Boat>> LUNAR_BOAT = ENTITIES.register(
 			"lunar_boat",
 			() -> EntityType.Builder.<Boat>of((type, level) -> new Boat(type, level, ESItems.LUNAR_BOAT), MobCategory.MISC)
@@ -412,6 +420,23 @@ public class ESEntities {
 					.clientTrackingRange(10)
 					.updateInterval(1)
 					.build(entityKey("sonar_bomb"))
+	);
+	
+	public static final RegistryObject<EntityType<?>, EntityType<AshenSnowball>> ASHEN_SNOWBALL = ENTITIES.register(
+		"ashen_snowball",
+		() -> EntityType.Builder.<AshenSnowball>of(AshenSnowball::new, MobCategory.MISC)
+			.sized(0.3f, 0.3f)
+			.clientTrackingRange(10)
+			.updateInterval(1)
+			.build(EternalStarlight.id("ashen_snowball").toString())
+	);
+	public static final RegistryObject<EntityType<?>, EntityType<FrozenBomb>> FROZEN_BOMB = ENTITIES.register(
+		"frozen_bomb",
+		() -> EntityType.Builder.<FrozenBomb>of(FrozenBomb::new, MobCategory.MISC)
+			.sized(0.3f, 0.3f)
+			.clientTrackingRange(10)
+			.updateInterval(1)
+			.build(EternalStarlight.id("frozen_bomb").toString())
 	);
 	public static final RegistryObject<EntityType<?>, EntityType<SoulitSpectator>> SOULIT_SPECTATOR = ENTITIES.register("soulit_spectator",
 			() -> EntityType.Builder.<SoulitSpectator>of(SoulitSpectator::new, MobCategory.MISC)

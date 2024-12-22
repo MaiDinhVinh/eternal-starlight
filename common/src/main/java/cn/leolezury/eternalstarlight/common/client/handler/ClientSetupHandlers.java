@@ -593,6 +593,7 @@ public class ClientSetupHandlers {
 		strategy.register(ESParticles.SMOKE_TRAIL.get(), SmokeTrailParticle.Provider::new);
 		strategy.register(ESParticles.AETHERSENT_EXPLOSION.get(), AethersentExplosionParticle.Provider::new);
 		strategy.register(ESParticles.ASHEN_SNOW.get(), AshenSnowParticle.Provider::new);
+		strategy.register(ESParticles.ORBITAL_ASHEN_SNOW.get(), OrbitalAshenSnowParticle.Provider::new);
 		strategy.register(ESParticles.EXPLOSION_SHOCK.get(), ExplosionShockParticle.Provider::new);
 		strategy.register(ESParticles.ADVANCED_GLOW.get(), AdvancedParticle.Provider::new);
 		strategy.register(ESParticles.SHINE.get(), AdvancedParticle.Provider::new);
@@ -613,6 +614,7 @@ public class ClientSetupHandlers {
 		strategy.register(ESEntities.FALLING_BLOCK.get(), ESFallingBlockRenderer::new);
 		strategy.register(ESEntities.PAINTING.get(), PaintingRenderer::new);
 		strategy.register(ESEntities.AETHERSENT_METEOR.get(), AethersentMeteorRenderer::new);
+		strategy.register(ESEntities.AETHERSTRIKE_ROCKET.get(), AetherstrikeRocketRenderer::new);
 		strategy.register(ESEntities.LUNAR_BOAT.get(), context -> new BoatRenderer(context, LUNAR_BOAT_LAYER));
 		strategy.register(ESEntities.LUNAR_CHEST_BOAT.get(), context -> new BoatRenderer(context, LUNAR_CHEST_BOAT_LAYER));
 		strategy.register(ESEntities.NORTHLAND_BOAT.get(), context -> new BoatRenderer(context, NORTHLAND_BOAT_LAYER));
@@ -663,6 +665,8 @@ public class ClientSetupHandlers {
 		strategy.register(ESEntities.AMARAMBER_ARROW.get(), AmaramberArrowRenderer::new);
 		strategy.register(ESEntities.VORACIOUS_ARROW.get(), VoraciousArrowRenderer::new);
 		strategy.register(ESEntities.SONAR_BOMB.get(), ThrownItemRenderer::new);
+		strategy.register(ESEntities.ASHEN_SNOWBALL.get(), ThrownItemRenderer::new);
+		strategy.register(ESEntities.FROZEN_BOMB.get(), ThrownItemRenderer::new);
 		strategy.register(ESEntities.SOULIT_SPECTATOR.get(), ThrownItemRenderer::new);
 		strategy.register(ESEntities.CHAIN_OF_SOULS.get(), ChainOfSoulsRenderer::new);
 	}
