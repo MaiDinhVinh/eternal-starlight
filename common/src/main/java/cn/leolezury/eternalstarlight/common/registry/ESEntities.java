@@ -223,11 +223,22 @@ public class ESEntities {
 					.clientTrackingRange(8)
 					.build(entityKey("ratlin"))
 	);
-	public static final RegistryObject<EntityType<?>, EntityType<Yeti>> YETI = ENTITIES.register("yeti",
-			() -> EntityType.Builder.of(Yeti::new, MobCategory.CREATURE)
-					.sized(0.9F, 0.9F)
-					.clientTrackingRange(8)
-					.build(entityKey("yeti"))
+	public static final RegistryObject<EntityType<?>, EntityType<ShadowSnail>> SHADOW_SNAIL = ENTITIES.register(
+		"shadow_snail",
+		() -> EntityType.Builder.of(ShadowSnail::new, MobCategory.CREATURE)
+			.sized(0.5F, 0.4F)
+			.eyeHeight(0.13F)
+			.passengerAttachments(0.2375F)
+			.ridingOffset(-0.0625F)
+			.clientTrackingRange(8)
+			.build(EternalStarlight.id("shadow_snail").toString())
+	);
+	public static final RegistryObject<EntityType<?>, EntityType<Yeti>> YETI = ENTITIES.register(
+		"yeti",
+		() -> EntityType.Builder.of(Yeti::new, MobCategory.CREATURE)
+			.sized(0.9F, 0.9F)
+			.clientTrackingRange(8)
+			.build(EternalStarlight.id("yeti").toString())
 	);
 	public static final RegistryObject<EntityType<?>, EntityType<AuroraDeer>> AURORA_DEER = ENTITIES.register("aurora_deer",
 			() -> EntityType.Builder.of(AuroraDeer::new, MobCategory.CREATURE)
