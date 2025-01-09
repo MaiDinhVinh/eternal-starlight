@@ -131,6 +131,7 @@ public class ClientSetupEvents {
 	@SubscribeEvent
 	private static void onBakingCompleted(ModelEvent.ModifyBakingResult event) {
 		Map<ModelResourceLocation, BakedModel> models = event.getModels();
+		ClientSetupHandlers.modifiedBakedModels = false;
 		ClientSetupHandlers.modifyBakingResult(models);
 	}
 
