@@ -62,17 +62,19 @@ import java.util.Map;
 import java.util.function.Supplier;
 
 public class CommonSetupHandlers {
-	public static final Supplier<Map<Block, Block>> STRIPPABLES = Suppliers.memoize(() -> Map.of(
-		ESBlocks.LUNAR_LOG.get(), ESBlocks.STRIPPED_LUNAR_LOG.get(),
-		ESBlocks.LUNAR_WOOD.get(), ESBlocks.STRIPPED_LUNAR_WOOD.get(),
-		ESBlocks.NORTHLAND_LOG.get(), ESBlocks.STRIPPED_NORTHLAND_LOG.get(),
-		ESBlocks.NORTHLAND_WOOD.get(), ESBlocks.STRIPPED_NORTHLAND_WOOD.get(),
-		ESBlocks.STARLIGHT_MANGROVE_LOG.get(), ESBlocks.STRIPPED_STARLIGHT_MANGROVE_LOG.get(),
-		ESBlocks.STARLIGHT_MANGROVE_WOOD.get(), ESBlocks.STRIPPED_STARLIGHT_MANGROVE_WOOD.get(),
-		ESBlocks.SCARLET_LOG.get(), ESBlocks.STRIPPED_SCARLET_LOG.get(),
-		ESBlocks.SCARLET_WOOD.get(), ESBlocks.STRIPPED_SCARLET_WOOD.get(),
-		ESBlocks.TORREYA_LOG.get(), ESBlocks.STRIPPED_TORREYA_LOG.get(),
-		ESBlocks.TORREYA_WOOD.get(), ESBlocks.STRIPPED_TORREYA_WOOD.get()
+	public static final Supplier<Map<Block, Block>> STRIPPABLES = Suppliers.memoize(() -> Map.ofEntries(
+		Map.entry(ESBlocks.LUNAR_LOG.get(), ESBlocks.STRIPPED_LUNAR_LOG.get()),
+		Map.entry(ESBlocks.LUNAR_WOOD.get(), ESBlocks.STRIPPED_LUNAR_WOOD.get()),
+		Map.entry(ESBlocks.NORTHLAND_LOG.get(), ESBlocks.STRIPPED_NORTHLAND_LOG.get()),
+		Map.entry(ESBlocks.NORTHLAND_WOOD.get(), ESBlocks.STRIPPED_NORTHLAND_WOOD.get()),
+		Map.entry(ESBlocks.STARLIGHT_MANGROVE_LOG.get(), ESBlocks.STRIPPED_STARLIGHT_MANGROVE_LOG.get()),
+		Map.entry(ESBlocks.STARLIGHT_MANGROVE_WOOD.get(), ESBlocks.STRIPPED_STARLIGHT_MANGROVE_WOOD.get()),
+		Map.entry(ESBlocks.SCARLET_LOG.get(), ESBlocks.STRIPPED_SCARLET_LOG.get()),
+		Map.entry(ESBlocks.SCARLET_WOOD.get(), ESBlocks.STRIPPED_SCARLET_WOOD.get()),
+		Map.entry(ESBlocks.TORREYA_LOG.get(), ESBlocks.STRIPPED_TORREYA_LOG.get()),
+		Map.entry(ESBlocks.TORREYA_WOOD.get(), ESBlocks.STRIPPED_TORREYA_WOOD.get()),
+		Map.entry(ESBlocks.JINGLESTEM_LOG.get(), ESBlocks.STRIPPED_JINGLESTEM_LOG.get()),
+		Map.entry(ESBlocks.JINGLESTEM_WOOD.get(), ESBlocks.STRIPPED_JINGLESTEM_WOOD.get())
 	));
 
 	public static final Supplier<Map<Block, Block>> TILLABLES = Suppliers.memoize(() -> Map.of(
@@ -114,6 +116,8 @@ public class CommonSetupHandlers {
 		DispenserBlock.registerBehavior(ESItems.SCARLET_CHEST_BOAT.get(), new BoatDispenseItemBehavior(ESEntities.SCARLET_CHEST_BOAT.get()));
 		DispenserBlock.registerBehavior(ESItems.TORREYA_BOAT.get(), new BoatDispenseItemBehavior(ESEntities.TORREYA_BOAT.get()));
 		DispenserBlock.registerBehavior(ESItems.TORREYA_CHEST_BOAT.get(), new BoatDispenseItemBehavior(ESEntities.TORREYA_CHEST_BOAT.get()));
+		DispenserBlock.registerBehavior(ESItems.JINGLESTEM_RAFT.get(), new ESBoatDispenseItemBehavior(ESBoat.Type.JINGLESTEM));
+		DispenserBlock.registerBehavior(ESItems.JINGLESTEM_CHEST_RAFT.get(), new ESBoatDispenseItemBehavior(ESBoat.Type.JINGLESTEM, true));
 		DispenserBlock.registerBehavior(ESItems.ETHER_BUCKET.get(), new BucketDispenseItemBehavior());
 		DispenserBlock.registerBehavior(ESItems.TOWER_SQUID_BUCKET.get(), new BucketDispenseItemBehavior());
 		DispenserBlock.registerBehavior(ESItems.LUMINOFISH_BUCKET.get(), new BucketDispenseItemBehavior());
