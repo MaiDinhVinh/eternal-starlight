@@ -58,6 +58,12 @@ public class LonestarSkeleton extends Skeleton {
 	public SpawnGroupData finalizeSpawn(ServerLevelAccessor serverLevelAccessor, DifficultyInstance difficultyInstance, EntitySpawnReason spawnReason, @Nullable SpawnGroupData spawnGroupData) {
 		SpawnGroupData data = super.finalizeSpawn(serverLevelAccessor, difficultyInstance, spawnReason, spawnGroupData);
 		Arrays.fill(this.handDropChances, 0.2F);
+		if (!getItemBySlot(EquipmentSlot.HEAD).isEmpty() || random.nextInt(5) == 0) {
+			setItemSlot(EquipmentSlot.HEAD, ESItems.AMARAMBER_HELMET.get().getDefaultInstance());
+		}
+		if (!getItemBySlot(EquipmentSlot.CHEST).isEmpty() || random.nextInt(5) == 0) {
+			setItemSlot(EquipmentSlot.CHEST, ESItems.AMARAMBER_CHESTPLATE.get().getDefaultInstance());
+		}
 		return data;
 	}
 
