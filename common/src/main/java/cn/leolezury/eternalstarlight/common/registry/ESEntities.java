@@ -208,14 +208,27 @@ public class ESEntities {
 					.clientTrackingRange(8)
 					.build(entityKey("thirst_walker"))
 	);
-	public static final RegistryObject<EntityType<?>, EntityType<Creteor>> CRETEOR = ENTITIES.register("creteor", () -> EntityType.Builder.of(Creteor::new, MobCategory.MONSTER).sized(0.6F, 1.5F).clientTrackingRange(8).build(EternalStarlight.id("creteor").toString()));
-	public static final RegistryObject<EntityType<?>, EntityType<TinyCreteor>> TINY_CRETEOR = ENTITIES.register("tiny_creteor", () -> EntityType.Builder.of(TinyCreteor::new, MobCategory.MONSTER).sized(0.5F, 0.5F).clientTrackingRange(8).build(EternalStarlight.id("tiny_creteor").toString()));
-	public static final RegistryObject<EntityType<?>, EntityType<Ent>> ENT = ENTITIES.register("ent",
-			() -> EntityType.Builder.of(Ent::new, MobCategory.CREATURE)
-					.sized(0.7F, 0.3F)
-					.passengerAttachments(0.35F)
-					.clientTrackingRange(8)
-					.build(entityKey("ent"))
+	public static final RegistryObject<EntityType<?>, EntityType<Creteor>> CRETEOR = ENTITIES.register(
+		"creteor",
+		() -> EntityType.Builder.of(Creteor::new, MobCategory.MONSTER)
+			.sized(0.6F, 1.5F)
+			.clientTrackingRange(8)
+			.build(EternalStarlight.id("creteor").toString())
+	);
+	public static final RegistryObject<EntityType<?>, EntityType<TinyCreteor>> TINY_CRETEOR = ENTITIES.register(
+		"tiny_creteor",
+		() -> EntityType.Builder.of(TinyCreteor::new, MobCategory.MONSTER)
+			.sized(0.5F, 0.5F)
+			.clientTrackingRange(8)
+			.build(EternalStarlight.id("tiny_creteor").toString())
+	);
+	public static final RegistryObject<EntityType<?>, EntityType<Ent>> ENT = ENTITIES.register(
+		"ent",
+		() -> EntityType.Builder.of(Ent::new, MobCategory.CREATURE)
+			.sized(0.5F, 0.6875F)
+			.passengerAttachments(0.35F)
+			.clientTrackingRange(8)
+			.build(EternalStarlight.id("ent").toString())
 	);
 	public static final RegistryObject<EntityType<?>, EntityType<Ratlin>> RATLIN = ENTITIES.register("ratlin",
 			() -> EntityType.Builder.of(Ratlin::new, MobCategory.CREATURE)
