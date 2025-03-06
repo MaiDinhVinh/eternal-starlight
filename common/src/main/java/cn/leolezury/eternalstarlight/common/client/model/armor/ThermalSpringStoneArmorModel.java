@@ -1,7 +1,6 @@
 package cn.leolezury.eternalstarlight.common.client.model.armor;
 
 import cn.leolezury.eternalstarlight.common.EternalStarlight;
-import cn.leolezury.eternalstarlight.common.client.handler.ClientHandlers;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import net.fabricmc.api.EnvType;
@@ -12,6 +11,8 @@ import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.client.model.geom.PartPose;
 import net.minecraft.client.model.geom.builders.*;
 import net.minecraft.client.renderer.entity.state.HumanoidRenderState;
+import net.minecraft.client.renderer.LightTexture;
+import net.minecraft.world.entity.LivingEntity;
 
 @Environment(EnvType.CLIENT)
 public class ThermalSpringStoneArmorModel<T extends HumanoidRenderState> extends HumanoidArmorModel<T> {
@@ -38,6 +39,6 @@ public class ThermalSpringStoneArmorModel<T extends HumanoidRenderState> extends
 
 	@Override
 	public void renderToBuffer(PoseStack stack, VertexConsumer builder, int packedLight, int packedOverlay, int color) {
-		super.renderToBuffer(stack, builder, ClientHandlers.FULL_BRIGHT, packedOverlay, color);
+		super.renderToBuffer(stack, builder, LightTexture.FULL_BRIGHT, packedOverlay, color);
 	}
 }
