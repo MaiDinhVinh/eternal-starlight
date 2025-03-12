@@ -4,6 +4,8 @@ import cn.leolezury.eternalstarlight.common.client.book.Book;
 import cn.leolezury.eternalstarlight.common.client.book.BookAccess;
 import cn.leolezury.eternalstarlight.common.client.book.component.BookComponentDefinition;
 import cn.leolezury.eternalstarlight.common.client.gui.screen.widget.ESPageButton;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.client.renderer.RenderType;
@@ -12,6 +14,7 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
+@Environment(EnvType.CLIENT)
 public class BookScreen extends Screen {
 	private final Book book;
 	private int pageSize;
