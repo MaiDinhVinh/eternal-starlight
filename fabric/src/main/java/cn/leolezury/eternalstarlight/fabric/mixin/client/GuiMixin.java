@@ -22,5 +22,6 @@ public abstract class GuiMixin {
 		ClientHandlers.renderDreamCatcher(guiGraphics);
 		ClientHandlers.renderCurrentCrest(guiGraphics);
 		ClientHandlers.renderCarvedLunarisCactusFruitBlur(guiGraphics);
+		ClientHandlers.renderPortalOverlay(guiGraphics);
 	}
 }
