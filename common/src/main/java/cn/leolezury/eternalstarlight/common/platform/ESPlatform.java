@@ -48,6 +48,7 @@ import net.minecraft.world.level.block.FlowerPotBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.FluidState;
+import net.minecraft.world.phys.Vec3;
 
 import java.nio.file.Path;
 import java.util.Iterator;
@@ -149,6 +150,11 @@ public interface ESPlatform {
 	}
 
 	default boolean postTravelToDimensionEvent(Entity entity, ResourceKey<Level> dimension) {
+		return true;
+	}
+
+
+	default boolean postTeleportEvent(Entity entity, Vec3 destPos) {
 		return true;
 	}
 
